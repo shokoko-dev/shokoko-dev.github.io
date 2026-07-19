@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shoko Sano — Portfolio</title>
-<meta name="description" content="Portfolio of Shoko Sano — projects and research in Human-Computer Interaction (HCI) and design.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+<title>Shoko Sano — HCI Researcher</title>
+<meta name="description" content="Shoko Sano — HCI/CSCW researcher exploring well-being, authenticity, and communication support. M.S. from the University of Tokyo (IIS Lab).">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <a class="nav-name" href="#">Shoko Sano</a>
+    <a class="nav-name" href="index.html">Shoko Sano</a>
     <div class="nav-links">
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" aria-current="page">About</a>
+      <a href="research.html">Research</a>
+      <a href="work.html">Work</a>
+      <a href="news.html">News</a>
     </div>
   </div>
 </nav>
@@ -25,101 +26,111 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero">
+    <!-- 写真が用意できたら: <img class="hero-photo" src="images/profile.jpg" alt="Shoko Sano"> に差し替え -->
     <div class="hero-photo">SS</div>
-    <p class="hero-role">HCI Researcher · Designer</p>
-    <h1>Hi, I'm Shoko.</h1>
-    <p>
-      I explore how people collaborate, learn, and make decisions with interactive
-      systems — and design technology that keeps humans at the center.
-      Currently preparing for graduate study in HCI and design.
-    </p>
-    <div class="hero-links">
-      <a class="btn btn-primary" href="#projects">View Projects</a>
-      <a class="btn btn-ghost" href="mailto:sanoshoko11@gmail.com">Email me</a>
+    <div>
+      <p class="hero-role">HCI · CSCW · Well-being</p>
+      <h1>Shoko Sano</h1>
+      <p>
+        I am a researcher and strategist exploring how technology can support
+        <strong>authentic communication, eudaimonic well-being, and human connection</strong>.
+        I hold an M.S. in Interdisciplinary Information Studies from the University of Tokyo
+        (IIS Lab, advised by Prof. Koji Yatani), where I studied interface design that
+        encourages casual chat in remote-work environments.
+      </p>
+      <p>
+        My path spans HCI research, strategy consulting at McKinsey &amp; Company,
+        customer-success leadership at a fast-growing startup, and 250+ hours of
+        professional coaching — a combination I bring to designing
+        <strong>relational systems</strong> that help people and organizations thrive.
+      </p>
+      <div class="hero-links">
+        <a class="btn btn-primary" href="mailto:sanoshoko11@gmail.com">Email me</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/shoko-sano-baa5b2153/">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/shokoko-dev">GitHub</a>
+      </div>
     </div>
   </section>
 
-  <!-- ============ PROJECTS ============ -->
-  <section id="projects">
-    <h2>Selected Projects</h2>
-    <div class="grid">
-
-      <!-- ▼▼ Projectカード:このブロックをコピーして増やす ▼▼ -->
-      <a class="card" href="projects/sample-project.html">
-        <img src="images/placeholder-1.svg" alt="Project 1 thumbnail">
-        <div class="card-body">
-          <h3>Project Title One</h3>
-          <p>One-line description of what this project is and what you did.</p>
-          <span class="card-tags">UX Research · Prototyping · 2025</span>
-        </div>
-      </a>
-      <!-- ▲▲ ここまでが1カード ▲▲ -->
-
-      <a class="card" href="projects/sample-project.html">
-        <img src="images/placeholder-2.svg" alt="Project 2 thumbnail">
-        <div class="card-body">
-          <h3>Project Title Two</h3>
-          <p>Short description — the problem, your approach, and the outcome.</p>
-          <span class="card-tags">Service Design · 2024</span>
-        </div>
-      </a>
-
-      <a class="card" href="projects/sample-project.html">
-        <img src="images/placeholder-3.svg" alt="Project 3 thumbnail">
-        <div class="card-body">
-          <h3>Project Title Three</h3>
-          <p>Short description — keep it to one or two lines for the grid.</p>
-          <span class="card-tags">Field Study · 2024</span>
-        </div>
-      </a>
-
-      <a class="card" href="projects/sample-project.html">
-        <img src="images/placeholder-4.svg" alt="Project 4 thumbnail">
-        <div class="card-body">
-          <h3>Project Title Four</h3>
-          <p>Short description — what it is and why it mattered.</p>
-          <span class="card-tags">Data Analysis · 2023</span>
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section id="about">
-    <h2>About</h2>
-    <p>
-      I'm a researcher and designer interested in <strong>Human-Computer Interaction</strong>
-      and <strong>collaborative technology</strong>. My background spans [your background —
-      e.g., field, industry experience, education], and I'm drawn to questions about how
-      technology can support learning, collaboration, and equitable decision-making.
-    </p>
-    <p>
-      I'm currently preparing applications for graduate study (HCI / design programs),
-      and this site collects the work I care about most.
-    </p>
+  <!-- ============ INTERESTS ============ -->
+  <section id="interests">
+    <h2>Research Interests</h2>
     <div class="tags">
-      <span class="tag">HCI</span>
-      <span class="tag">UX Research</span>
-      <span class="tag">Design</span>
-      <span class="tag">Social Computing</span>
-      <span class="tag">Qualitative Methods</span>
+      <span class="tag">Human-Computer Interaction</span>
+      <span class="tag">CSCW</span>
+      <span class="tag">Eudaimonic Well-being</span>
+      <span class="tag">Authenticity</span>
+      <span class="tag">Affective Computing</span>
+      <span class="tag">Self-Determination Theory</span>
+      <span class="tag">Narrative Identity</span>
+      <span class="tag">Informal Communication</span>
+      <span class="tag">Psychological Safety</span>
+      <span class="tag">Relational Systems Design</span>
     </div>
+  </section>
+
+  <!-- ============ BACKGROUND ============ -->
+  <section id="background">
+    <h2>Background</h2>
+    <ul class="timeline">
+      <li><span class="years">2026 –</span>
+        <span><strong>Globe-ing Inc.</strong> — Thought Leadership Strategy Lead, Strategy Office (dynamic-equilibrium management: life-science × management theory)</span></li>
+      <li><span class="years">2025 –</span>
+        <span><strong>The University of Tokyo</strong> — Senior Advisor, Deeptech Entrepreneurship Course, School of Engineering</span></li>
+      <li><span class="years">2024 – 2026</span>
+        <span><strong>Asobica Inc.</strong> — Enterprise Customer Success Manager (community strategy &amp; UI/UX consulting for Japan's largest consumer brands)</span></li>
+      <li><span class="years">2022 – 2024</span>
+        <span><strong>McKinsey &amp; Company</strong> — Business Analyst (8 engagements across 5 industries); Lead Consultant, A2E organizational-change program (McKinsey Academy)</span></li>
+      <li><span class="years">2020 – 2022</span>
+        <span><strong>The University of Tokyo</strong> — M.S., Interdisciplinary Information Studies (IIS Lab, Prof. Koji Yatani) · GPA 3.74/4.0</span></li>
+      <li><span class="years">2016 – 2020</span>
+        <span><strong>The University of Tokyo</strong> — B.S., Aerospace Engineering · Admitted via the first School Recommendation Examination (inaugural cohort)</span></li>
+    </ul>
+  </section>
+
+  <!-- ============ SELECTED HONORS ============ -->
+  <section id="honors">
+    <h2>Selected Honors &amp; Awards</h2>
+    <ul class="honors">
+      <li><strong>Google Women Techmakers Scholar</strong> — competitive Google scholarship for women in engineering; APAC Scholars' Retreat, Singapore <span class="year">2018</span></li>
+      <li><strong>First School Recommendation Examination, The University of Tokyo</strong> — inaugural cohort (77 admits nationwide) <span class="year">2016</span></li>
+      <li><strong>TOMODACHI-STEM Women's Leadership &amp; Research Program</strong> — 10 students selected nationwide; research internship at Rice University <span class="year">2018</span></li>
+      <li><strong>Grand Prize, University of Tokyo Women's Hackathon</strong> — app randomly surfacing women's career paths</li>
+      <li><strong>Science Koshien</strong> — national finalist (Osaka regional champion), organized by JST <span class="year">2015</span></li>
+      <li><strong>Audience Award, Weather Culture Award</strong> — invented a UV-measuring weather device; national final <span class="year">2013</span></li>
+    </ul>
+  </section>
+
+  <!-- ============ NEWS (recent) ============ -->
+  <section id="news">
+    <h2>News</h2>
+    <table class="news-table">
+      <tr><td class="date">Apr 2026</td>
+        <td>Joined <strong>Globe-ing Inc.</strong> as Thought Leadership Strategy Lead, launching a dynamic-equilibrium management framework.</td></tr>
+      <tr><td class="date">Nov 2025</td>
+        <td>Appointed <strong>Senior Advisor</strong> to the Deeptech Entrepreneurship Course, School of Engineering, The University of Tokyo.</td></tr>
+      <tr><td class="date">Sep 2024</td>
+        <td>Featured as a career role model on BizReach's YouTube series <a href="https://www.youtube.com/watch?v=1V89X_YZSRM">"Shigoto-Reach"</a> (240k+ views).</td></tr>
+      <tr><td class="date">Jan 2022</td>
+        <td>Master's research featured by <a href="https://www.iii.u-tokyo.ac.jp/news/2022012515983">UTokyo III</a>, <a href="https://www.ee.t.u-tokyo.ac.jp/news/2237/">EEIC News</a>, J-GLOBAL, and NewsPicks.</td></tr>
+      <tr><td class="date">Dec 2021</td>
+        <td>First-author presentation at <strong>IPSJ SIG-HCI</strong>: A Qualitative Study of Interface Design to Support Casual Chat in Remote-Work Environments.</td></tr>
+    </table>
+    <a class="more-link" href="news.html">All news →</a>
   </section>
 
   <!-- ============ CONTACT ============ -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>The best way to reach me is by email. I'm happy to share my CV or talk about my work.</p>
     <div class="contact-grid">
       <div class="contact-row"><span class="contact-label">Email</span>
         <a href="mailto:sanoshoko11@gmail.com">sanoshoko11@gmail.com</a></div>
+      <div class="contact-row"><span class="contact-label">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/shoko-sano-baa5b2153/">shoko-sano</a></div>
       <div class="contact-row"><span class="contact-label">GitHub</span>
         <a href="https://github.com/shokoko-dev">@shokoko-dev</a></div>
-      <div class="contact-row"><span class="contact-label">LinkedIn</span>
-        <a href="#">Profile</a></div>
       <div class="contact-row"><span class="contact-label">CV</span>
-        <a href="#">Download PDF</a></div>
+        <span style="color:var(--text-faint)">Available upon request</span></div>
     </div>
   </section>
 
