@@ -3,132 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shoko Sano — Academic Portfolio</title>
-<meta name="description" content="Academic portfolio of Shoko Sano — researcher in Human-Computer Interaction (HCI) and Computer-Supported Cooperative Work (CSCW).">
+<title>Shoko Sano — Portfolio</title>
+<meta name="description" content="Portfolio of Shoko Sano — projects and research in Human-Computer Interaction (HCI) and design.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
-<style>
-  :root {
-    --bg: #ffffff;
-    --surface: #f7f7f5;
-    --border: #e6e6e1;
-    --text: #1a1a1a;
-    --text-soft: #55554f;
-    --text-faint: #8a8a82;
-    --accent: #3d5a80;
-    --accent-soft: #eaeef4;
-    --max: 720px;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #14151a;
-      --surface: #1c1e24;
-      --border: #2b2d35;
-      --text: #ececec;
-      --text-soft: #b6b7bd;
-      --text-faint: #7c7e86;
-      --accent: #8fb0d4;
-      --accent-soft: #232833;
-    }
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Hiragino Sans", "Noto Sans JP", Arial, sans-serif;
-    line-height: 1.7;
-    font-size: 17px;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  /* Nav */
-  nav {
-    position: sticky; top: 0; z-index: 10;
-    background: color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter: saturate(180%) blur(12px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-inner {
-    max-width: var(--max); margin: 0 auto; padding: 14px 24px;
-    display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  }
-  .nav-name { font-weight: 600; letter-spacing: -0.01em; }
-  .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
-  .nav-links a { color: var(--text-soft); font-size: 15px; }
-  .nav-links a:hover { color: var(--accent); text-decoration: none; }
-
-  /* Layout */
-  main { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
-  section { padding: 56px 0; border-bottom: 1px solid var(--border); }
-  section:last-of-type { border-bottom: none; }
-  h1 { font-size: 2.1rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 8px; }
-  h2 {
-    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--text-faint); font-weight: 600; margin: 0 0 24px;
-  }
-  h3 { font-size: 1.05rem; margin: 0 0 4px; letter-spacing: -0.01em; }
-  p { margin: 0 0 16px; color: var(--text-soft); }
-
-  /* Hero */
-  .hero { padding-top: 64px; }
-  .hero-role { color: var(--accent); font-weight: 600; font-size: 1.05rem; margin: 0 0 20px; }
-  .hero-photo {
-    width: 108px; height: 108px; border-radius: 50%; object-fit: cover;
-    background: var(--surface); border: 1px solid var(--border); margin-bottom: 28px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 2.4rem; color: var(--text-faint);
-  }
-  .hero-links { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px; }
-  .btn {
-    display: inline-block; padding: 9px 18px; border-radius: 8px; font-size: 15px; font-weight: 500;
-  }
-  .btn-primary { background: var(--accent); color: #fff; }
-  .btn-primary:hover { text-decoration: none; opacity: 0.9; }
-  .btn-ghost { border: 1px solid var(--border); color: var(--text-soft); }
-  .btn-ghost:hover { text-decoration: none; border-color: var(--accent); color: var(--accent); }
-
-  /* Research tags */
-  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-  .tag {
-    font-size: 14px; padding: 5px 12px; border-radius: 999px;
-    background: var(--accent-soft); color: var(--accent); font-weight: 500;
-  }
-
-  /* Item lists */
-  .item { padding: 18px 0; border-bottom: 1px solid var(--border); }
-  .item:last-child { border-bottom: none; }
-  .item-meta { font-size: 14px; color: var(--text-faint); margin: 2px 0 6px; }
-  .item-venue { font-style: italic; }
-  .item p { margin: 8px 0 0; font-size: 15px; }
-  .item-links { margin-top: 8px; display: flex; gap: 14px; font-size: 14px; }
-
-  /* Contact */
-  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 4px 24px; }
-  .contact-row { display: flex; gap: 10px; padding: 8px 0; align-items: baseline; }
-  .contact-label { color: var(--text-faint); font-size: 14px; min-width: 76px; }
-
-  footer { text-align: center; padding: 40px 24px; color: var(--text-faint); font-size: 14px; }
-
-  @media (max-width: 560px) {
-    body { font-size: 16px; }
-    h1 { font-size: 1.7rem; }
-    .nav-links { display: none; }
-    section { padding: 44px 0; }
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <span class="nav-name">Shoko Sano</span>
+    <a class="nav-name" href="#">Shoko Sano</a>
     <div class="nav-links">
+      <a href="#projects">Projects</a>
       <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#work">Publications</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -136,134 +23,110 @@
 
 <main>
 
-  <!-- ============ HERO / ABOUT ============ -->
-  <section id="about" class="hero">
+  <!-- ============ HERO ============ -->
+  <section class="hero">
     <div class="hero-photo">SS</div>
-    <p class="hero-role">Ph.D. Applicant · HCI &amp; CSCW Researcher</p>
-    <h1>Shoko Sano</h1>
+    <p class="hero-role">HCI Researcher · Designer</p>
+    <h1>Hi, I'm Shoko.</h1>
     <p>
-      I am a researcher interested in <strong>Human-Computer Interaction</strong> and
-      <strong>Computer-Supported Cooperative Work</strong>. My work explores how people
-      collaborate, learn, and make decisions with the support of interactive systems —
-      and how we can design those systems to be more equitable and human-centered.
-    </p>
-    <p>
-      I am currently preparing to pursue a Ph.D. and am a
-      <a href="#">Fulbright</a>-track applicant. This page collects my research
-      interests, projects, and academic materials.
+      I explore how people collaborate, learn, and make decisions with interactive
+      systems — and design technology that keeps humans at the center.
+      Currently preparing for graduate study in HCI and design.
     </p>
     <div class="hero-links">
-      <a class="btn btn-primary" href="#" download>Download CV (PDF)</a>
+      <a class="btn btn-primary" href="#projects">View Projects</a>
       <a class="btn btn-ghost" href="mailto:sanoshoko11@gmail.com">Email me</a>
     </div>
   </section>
 
-  <!-- ============ RESEARCH INTERESTS ============ -->
-  <section id="research">
-    <h2>Research Interests</h2>
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <h2>Selected Projects</h2>
+    <div class="grid">
+
+      <!-- ▼▼ Projectカード:このブロックをコピーして増やす ▼▼ -->
+      <a class="card" href="projects/sample-project.html">
+        <img src="images/placeholder-1.svg" alt="Project 1 thumbnail">
+        <div class="card-body">
+          <h3>Project Title One</h3>
+          <p>One-line description of what this project is and what you did.</p>
+          <span class="card-tags">UX Research · Prototyping · 2025</span>
+        </div>
+      </a>
+      <!-- ▲▲ ここまでが1カード ▲▲ -->
+
+      <a class="card" href="projects/sample-project.html">
+        <img src="images/placeholder-2.svg" alt="Project 2 thumbnail">
+        <div class="card-body">
+          <h3>Project Title Two</h3>
+          <p>Short description — the problem, your approach, and the outcome.</p>
+          <span class="card-tags">Service Design · 2024</span>
+        </div>
+      </a>
+
+      <a class="card" href="projects/sample-project.html">
+        <img src="images/placeholder-3.svg" alt="Project 3 thumbnail">
+        <div class="card-body">
+          <h3>Project Title Three</h3>
+          <p>Short description — keep it to one or two lines for the grid.</p>
+          <span class="card-tags">Field Study · 2024</span>
+        </div>
+      </a>
+
+      <a class="card" href="projects/sample-project.html">
+        <img src="images/placeholder-4.svg" alt="Project 4 thumbnail">
+        <div class="card-body">
+          <h3>Project Title Four</h3>
+          <p>Short description — what it is and why it mattered.</p>
+          <span class="card-tags">Data Analysis · 2023</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <h2>About</h2>
     <p>
-      My research sits at the intersection of interaction design and social computing.
-      I study the everyday practices of collaboration and learning, and I build and
-      evaluate tools that make those practices richer, fairer, and more accessible.
+      I'm a researcher and designer interested in <strong>Human-Computer Interaction</strong>
+      and <strong>collaborative technology</strong>. My background spans [your background —
+      e.g., field, industry experience, education], and I'm drawn to questions about how
+      technology can support learning, collaboration, and equitable decision-making.
     </p>
-    <p>Broadly, I am currently drawn to three questions:</p>
-
-    <div class="item">
-      <h3>Collaborative &amp; social computing</h3>
-      <p>How do groups coordinate, share knowledge, and build trust through technology —
-        and how can design reduce friction and inequity in that process?</p>
-    </div>
-    <div class="item">
-      <h3>Technology-supported learning</h3>
-      <p>Designing interactive systems that support language learning and skill
-        acquisition, with attention to feedback, motivation, and self-directed practice.</p>
-    </div>
-    <div class="item">
-      <h3>Human-centered &amp; responsible AI</h3>
-      <p>Understanding how people interpret and rely on AI-generated support, and
-        designing interfaces that keep humans in meaningful control.</p>
-    </div>
-
+    <p>
+      I'm currently preparing applications for graduate study (HCI / design programs),
+      and this site collects the work I care about most.
+    </p>
     <div class="tags">
       <span class="tag">HCI</span>
-      <span class="tag">CSCW</span>
+      <span class="tag">UX Research</span>
+      <span class="tag">Design</span>
       <span class="tag">Social Computing</span>
-      <span class="tag">Learning Technologies</span>
-      <span class="tag">Human-AI Interaction</span>
       <span class="tag">Qualitative Methods</span>
     </div>
   </section>
 
-  <!-- ============ PUBLICATIONS / PROJECTS ============ -->
-  <section id="work">
-    <h2>Publications &amp; Projects</h2>
-
-    <div class="item">
-      <h3>[Project / Paper Title]</h3>
-      <div class="item-meta">
-        Author One, <strong>Shoko Sano</strong>, Author Three ·
-        <span class="item-venue">Venue / Workshop</span>, 2026
-      </div>
-      <p>One or two sentences describing the contribution: the problem, what you built or
-        studied, and the key finding. Keep it concrete and readable.</p>
-      <div class="item-links">
-        <a href="#">PDF</a>
-        <a href="#">Project page</a>
-        <a href="#">Code</a>
-      </div>
-    </div>
-
-    <div class="item">
-      <h3>[Second Project Title]</h3>
-      <div class="item-meta">
-        <strong>Shoko Sano</strong> · Independent / Course project, 2025
-      </div>
-      <p>Short description of the project, your role, methods used, and outcome.</p>
-      <div class="item-links">
-        <a href="#">Write-up</a>
-        <a href="#">Demo</a>
-      </div>
-    </div>
-
-    <div class="item">
-      <h3>[Third Project Title]</h3>
-      <div class="item-meta">Poster / Work in progress, 2025</div>
-      <p>Placeholder — replace with a real project, a class project, or ongoing work.</p>
-    </div>
-
-    <p style="margin-top:24px; font-size:15px; color:var(--text-faint);">
-      More work and a full publication list are available in my
-      <a href="#">CV</a>.
-    </p>
-  </section>
-
   <!-- ============ CONTACT ============ -->
   <section id="contact">
-    <h2>CV &amp; Contact</h2>
-    <p>
-      I'm always happy to talk about research collaborations, Ph.D. opportunities,
-      and HCI/CSCW work. The best way to reach me is by email.
-    </p>
+    <h2>Contact</h2>
+    <p>The best way to reach me is by email. I'm happy to share my CV or talk about my work.</p>
     <div class="contact-grid">
       <div class="contact-row"><span class="contact-label">Email</span>
         <a href="mailto:sanoshoko11@gmail.com">sanoshoko11@gmail.com</a></div>
-      <div class="contact-row"><span class="contact-label">CV</span>
-        <a href="#">Download PDF</a></div>
       <div class="contact-row"><span class="contact-label">GitHub</span>
         <a href="https://github.com/shokoko-dev">@shokoko-dev</a></div>
-      <div class="contact-row"><span class="contact-label">Google Scholar</span>
-        <a href="#">Profile</a></div>
       <div class="contact-row"><span class="contact-label">LinkedIn</span>
         <a href="#">Profile</a></div>
-      <div class="contact-row"><span class="contact-label">ORCID</span>
-        <a href="#">0000-0000-0000-0000</a></div>
+      <div class="contact-row"><span class="contact-label">CV</span>
+        <a href="#">Download PDF</a></div>
     </div>
   </section>
 
 </main>
 
 <footer>
-  © 2026 Shoko Sano · Built with GitHub Pages
+  © 2026 Shoko Sano
 </footer>
 
 </body>
