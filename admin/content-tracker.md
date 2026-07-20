@@ -23,7 +23,11 @@
 | A2E日本展開 | Professional | ✅ 公開中 | — |
 | Google SWEインターン | Professional | ✅ 公開中 | 定量成果あれば追記(TBD) |
 | 東大Deeptech講座 | Professional | ✅ 公開中 | — |
+| Women Tech Community(CS入門ガイド改め) | Projects | ✅ 公開中 | 📷 サムネ(ms_cs.pptx or Wixサイトのスクショ)、🎤 Interview |
+| 名古屋飛行実習(実機フライトテスト) | Projects | ✅ 公開中 | 📷 当時の写真 or **POS_FLT4のKML飛行軌跡を地図画像化してサムネに**(面白案) |
+| 東大女子ハッカソン | Honors(2018年確定) | ✅ 公開中 | Projectsカードは作らない(本人判断) |
 | カンボジア教育NPO(MIS) | Projects候補 | ⏸ 未掲載 | 🎤 **先にインタビュー必須**。写真あり |
+| GEfIL / ESA国際研修 / WBA若手の会 | — | ❌ 非掲載 | 本人判断(2026-07-20) |
 | OEJAB活動報告の転用 | Honors(リンク済) | ✅ リンクのみ | 記事本文を詳細ページ化するか検討 |
 | 機械学習業務委託 | — | ❌ 非掲載 | CVのみ(本人判断) |
 | 東大CAST / Tea Time Tech Lab | — | ❌ 非掲載 | CVのみ |
