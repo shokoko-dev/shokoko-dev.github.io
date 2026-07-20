@@ -105,6 +105,15 @@ p { margin: 0 0 16px; color: var(--text-soft); }
   color: var(--accent); font-weight: 600; font-size: 1rem;
   letter-spacing: 0.05em; text-transform: uppercase; margin: 0 0 14px;
 }
+/* 写真下のソーシャルアイコン */
+.icon-row { display: flex; gap: 14px; margin-top: 18px; justify-content: center; }
+.icon-row a {
+  display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid var(--border); color: var(--text-soft);
+}
+.icon-row a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.icon-row svg { width: 18px; height: 18px; fill: currentColor; }
 .hero-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
 .btn {
   display: inline-block; padding: 9px 20px; border-radius: 6px;
@@ -175,8 +184,27 @@ a.card:hover {
 .card-tags { font-size: 12.5px; color: var(--text-faint); letter-spacing: 0.02em; }
 
 /* ---------- Research entries ---------- */
-.research-entry { max-width: 860px; padding: 34px 0; border-bottom: 1px solid var(--border); }
+.research-entry { max-width: 860px; padding: 28px 0; border-bottom: 1px solid var(--border); }
 .research-entry:last-of-type { border-bottom: none; }
+.research-entry h2 {
+  font-size: 1.18rem; border-bottom: none; padding-bottom: 0; margin-bottom: 4px;
+}
+.research-entry p { font-size: 15.5px; }
+.pub-label {
+  display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
+}
+
+/* ---------- Professional experience list (Workページ・サムネなし) ---------- */
+.prof-list { max-width: 860px; }
+.prof-entry {
+  padding: 22px 24px; margin-bottom: 18px;
+  border: 1px solid var(--border); border-radius: 10px; background: var(--surface);
+}
+.prof-entry h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.prof-entry .prof-meta { font-size: 13.5px; color: var(--text-faint); margin-bottom: 8px; }
+.prof-entry p { margin: 0 0 8px; font-size: 15px; }
+.prof-entry .pub-links { margin-top: 4px; }
 .research-entry .venue { font-style: italic; color: var(--text-faint); font-size: 14.5px; }
 .research-meta {
   display: flex; flex-wrap: wrap; gap: 6px 30px; margin: 12px 0 16px;
