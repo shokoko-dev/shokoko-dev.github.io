@@ -96,18 +96,6 @@ p { margin: 0 0 16px; color: var(--text-soft); }
   align-items: start;
   position: relative;
 }
-/* Shokoの世界観イラストを背景にごく薄く敷く(軽量) */
-.hero::before {
-  content: ""; position: absolute; inset: -20px -40px; pointer-events: none; z-index: -1;
-  background: url("images/vision.jpg") no-repeat right center;
-  background-size: contain;
-  opacity: 0.07;
-  -webkit-mask-image: linear-gradient(to left, #000 20%, transparent 75%);
-  mask-image: linear-gradient(to left, #000 20%, transparent 75%);
-}
-@media (prefers-color-scheme: dark) {
-  .hero::before { opacity: 0.10; }
-}
 .hero-photo {
   width: 250px; aspect-ratio: 5 / 6; border-radius: 12px; object-fit: cover;
   background: var(--surface); border: 1px solid var(--border);
