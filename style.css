@@ -94,12 +94,47 @@ p { margin: 0 0 16px; color: var(--text-soft); }
   padding: 64px 0 48px;
   display: grid; grid-template-columns: 250px 1fr; gap: 44px;
   align-items: start;
+  position: relative;
+}
+/* Shokoの世界観イラスト由来のパステル・コンフェッティ(軽量CSSのみ) */
+.hero::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: -1;
+  background:
+    radial-gradient(circle 5px at 4% 18%, #f9c8d3 97%, transparent),
+    radial-gradient(circle 4px at 12% 72%, #bfe6c9 97%, transparent),
+    radial-gradient(circle 6px at 22% 32%, #f7e6a3 97%, transparent),
+    radial-gradient(circle 4px at 38% 85%, #d8c8ee 97%, transparent),
+    radial-gradient(circle 5px at 55% 12%, #bcd9f0 97%, transparent),
+    radial-gradient(circle 4px at 68% 65%, #f9c8d3 97%, transparent),
+    radial-gradient(circle 6px at 80% 24%, #bfe6c9 97%, transparent),
+    radial-gradient(circle 4px at 90% 78%, #f7e6a3 97%, transparent),
+    radial-gradient(circle 5px at 97% 45%, #d8c8ee 97%, transparent);
+  opacity: 0.6;
+}
+@media (prefers-color-scheme: dark) {
+  .hero::before { opacity: 0.28; }
 }
 .hero-photo {
   width: 250px; aspect-ratio: 5 / 6; border-radius: 12px; object-fit: cover;
   background: var(--surface); border: 1px solid var(--border);
   display: flex; align-items: center; justify-content: center;
   font-size: 3rem; color: var(--text-faint); font-weight: 600;
+}
+/* 写真カルーセル(横スワイプ・CSSのみ) */
+.photo-carousel {
+  width: 250px; aspect-ratio: 5 / 6; border-radius: 12px;
+  border: 1px solid var(--border);
+  display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.photo-carousel::-webkit-scrollbar { display: none; }
+.photo-carousel img {
+  flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover;
+  scroll-snap-align: center;
+}
+.photo-hint {
+  font-size: 12px; color: var(--text-faint); text-align: center;
+  margin: 8px 0 0; letter-spacing: 0.04em;
 }
 .hero-role {
   color: var(--accent); font-weight: 600; font-size: 1rem;
@@ -252,7 +287,7 @@ footer {
   h1 { font-size: 1.7rem; }
   section { padding: 40px 0; }
   .hero { grid-template-columns: 1fr; gap: 28px; padding-top: 44px; }
-  .hero-photo { width: 180px; }
+  .hero-photo, .photo-carousel { width: 200px; }
   .grid3 { grid-template-columns: 1fr; }
   .nav-links { gap: 14px; }
   .timeline li { grid-template-columns: 96px 1fr; gap: 12px; }

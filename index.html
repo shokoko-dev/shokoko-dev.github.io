@@ -27,15 +27,23 @@
   <!-- ============ HERO / ABOUT ============ -->
   <section class="hero">
     <div>
-      <!-- 写真が用意できたら: <img class="hero-photo" src="images/profile.jpg" alt="Shoko Sano"> に差し替え -->
-      <div class="hero-photo">SS</div>
-      <!-- ソーシャルアイコン(Email=Gmail作成画面 / LinkedIn / GitHub) -->
+      <!-- 写真カルーセル: 横スワイプで切替(CSSのみ・JSなし) -->
+      <div class="photo-carousel">
+        <img src="images/profile-1.jpg" alt="Shoko Sano flying a Cessna over the Golden Gate" style="object-position: 62% 40%;">
+        <img src="images/profile-2.jpg" alt="Shoko Sano">
+        <img src="images/profile-3.jpg" alt="Shoko Sano with a Cessna 172" style="object-position: 50% 55%;">
+      </div>
+      <p class="photo-hint">← swipe →</p>
+      <!-- ソーシャルアイコン(Email=Gmail作成画面 / LinkedIn / Facebook / GitHub) -->
       <div class="icon-row">
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sanoshoko11@gmail.com" title="Email" aria-label="Email">
           <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5.1-8-5.1V6.29l8 5.1 8-5.1v1.95z"/></svg>
         </a>
         <a href="https://www.linkedin.com/in/shoko-sano-baa5b2153/" title="LinkedIn" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100004553895123" title="Facebook" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M13.5 21v-7.5h2.52l.38-2.93H13.5V8.7c0-.85.24-1.43 1.45-1.43h1.55V4.65c-.27-.04-1.19-.12-2.26-.12-2.24 0-3.77 1.37-3.77 3.88v2.16H8v2.93h2.47V21h3.03z"/></svg>
         </a>
         <a href="https://github.com/shokoko-dev" title="GitHub" aria-label="GitHub">
           <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
@@ -77,12 +85,15 @@
   <section id="honors">
     <h2>Selected Honors &amp; Awards</h2>
     <ul class="honors">
-      <li><strong>Google Women Techmakers Scholar</strong> — competitive Google scholarship for women in engineering; APAC Scholars' Retreat, Singapore <span class="year">2018</span></li>
-      <li><strong>First School Recommendation Examination, The University of Tokyo</strong> — inaugural cohort (77 admits nationwide) <span class="year">2016</span></li>
-      <li><strong>TOMODACHI-STEM Women's Leadership &amp; Research Program</strong> — 10 students selected nationwide; research internship at Rice University <span class="year">2018</span></li>
-      <li><strong>Grand Prize, University of Tokyo Women's Hackathon</strong> — app randomly surfacing women's career paths</li>
-      <li><strong>Science Koshien</strong> — national finalist (Osaka regional champion), organized by JST <span class="year">2015</span></li>
-      <li><strong>Audience Award, Weather Culture Award</strong> — invented a UV-measuring weather device; national final <span class="year">2013</span></li>
+      <li><strong>Google Women Techmakers Scholar</strong> — Google's competitive global scholarship recognizing engineering excellence, leadership, and commitment to diversity; APAC Scholars' Retreat, Singapore <span class="year">2018</span></li>
+      <li><strong>Inaugural cohort, the University of Tokyo's first holistic admissions program</strong> — selected as one of 77 students nationwide in the university's first-ever recommendation-based admission to the School of Engineering <span class="year">2016</span></li>
+      <li><strong>TOMODACHI-STEM Women's Leadership &amp; Research Program</strong> — one of 10 students selected nationwide for a funded research internship at Rice University <span class="year">2018</span></li>
+      <li><strong>Japanese Delegation Leader, Asia Science Camp</strong> — led the ~20-member national delegation at a Nobel-laureate-led program gathering ~300 selected students from 30+ countries (Malaysia) <span class="year">2017</span></li>
+      <li><strong>Space Education Program (Astronaut Chiaki Mukai / JAXA)</strong> — selected for a year-long hands-on program: dispatched to NASA (Johnson &amp; Ames), built a CanSat, completed parabolic-flight training <span class="year">2016–17</span></li>
+      <li><strong>OEJAB Next-Generation Leaders Program</strong> — selected for a leadership program sponsored by the foundation of former Prime Minister Yukio Hatoyama, investing in leaders shaping the country's future; Vienna delegation (<a href="https://yuai-love.com/activity/2022/3-3.html">activity report</a>) <span class="year">2021</span></li>
+      <li><strong>Grand Prize, University of Tokyo Women's Hackathon</strong> — app surfacing diverse career role models for women</li>
+      <li><strong>National Finalist, Science Koshien</strong> — Japan's national high-school science championship run by the Japan Science and Technology Agency (JST), the country's national science agency; Osaka regional champion <span class="year">2015</span></li>
+      <li><strong>Audience Award, Weather Culture Award</strong> — invented a UV-measuring weather device; reached the national final of a contest chaired by a leading UTokyo space researcher <span class="year">2013</span></li>
     </ul>
   </section>
 
@@ -95,9 +106,9 @@
       <tr><td class="date">Jan 2022</td>
         <td>Master's research featured by <a href="https://www.iii.u-tokyo.ac.jp/news/2022012515983">UTokyo III</a>, <a href="https://www.ee.t.u-tokyo.ac.jp/news/2237/">EEIC News</a>, J-GLOBAL, and NewsPicks.</td></tr>
       <tr><td class="date">Jan 2019</td>
-        <td>Featured in the <a href="https://www.todaishimbun.org/company/20190115/">UTokyo Shimbun</a> as a role model for women in engineering.</td></tr>
+        <td>Featured in the <a href="https://www.todaishimbun.org/company/20190115/">University of Tokyo's campus newspaper</a> as a role model for women in engineering.</td></tr>
       <tr><td class="date">Apr 2015</td>
-        <td>High School Diplomats activities featured in the <strong>Sankei Shimbun</strong>, a Japanese national newspaper.</td></tr>
+        <td>High School Diplomats activities featured in <strong>Sankei Shimbun</strong>, one of Japan's national daily newspapers.</td></tr>
     </table>
     <a class="more-link" href="news.html">All news →</a>
   </section>
