@@ -96,23 +96,17 @@ p { margin: 0 0 16px; color: var(--text-soft); }
   align-items: start;
   position: relative;
 }
-/* Shokoの世界観イラスト由来のパステル・コンフェッティ(軽量CSSのみ) */
+/* Shokoの世界観イラストを背景にごく薄く敷く(軽量) */
 .hero::before {
-  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: -1;
-  background:
-    radial-gradient(circle 5px at 4% 18%, #f9c8d3 97%, transparent),
-    radial-gradient(circle 4px at 12% 72%, #bfe6c9 97%, transparent),
-    radial-gradient(circle 6px at 22% 32%, #f7e6a3 97%, transparent),
-    radial-gradient(circle 4px at 38% 85%, #d8c8ee 97%, transparent),
-    radial-gradient(circle 5px at 55% 12%, #bcd9f0 97%, transparent),
-    radial-gradient(circle 4px at 68% 65%, #f9c8d3 97%, transparent),
-    radial-gradient(circle 6px at 80% 24%, #bfe6c9 97%, transparent),
-    radial-gradient(circle 4px at 90% 78%, #f7e6a3 97%, transparent),
-    radial-gradient(circle 5px at 97% 45%, #d8c8ee 97%, transparent);
-  opacity: 0.6;
+  content: ""; position: absolute; inset: -20px -40px; pointer-events: none; z-index: -1;
+  background: url("images/vision.jpg") no-repeat right center;
+  background-size: contain;
+  opacity: 0.07;
+  -webkit-mask-image: linear-gradient(to left, #000 20%, transparent 75%);
+  mask-image: linear-gradient(to left, #000 20%, transparent 75%);
 }
 @media (prefers-color-scheme: dark) {
-  .hero::before { opacity: 0.28; }
+  .hero::before { opacity: 0.10; }
 }
 .hero-photo {
   width: 250px; aspect-ratio: 5 / 6; border-radius: 12px; object-fit: cover;
@@ -131,10 +125,6 @@ p { margin: 0 0 16px; color: var(--text-soft); }
 .photo-carousel img {
   flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover;
   scroll-snap-align: center;
-}
-.photo-hint {
-  font-size: 12px; color: var(--text-faint); text-align: center;
-  margin: 8px 0 0; letter-spacing: 0.04em;
 }
 .hero-role {
   color: var(--accent); font-weight: 600; font-size: 1rem;
